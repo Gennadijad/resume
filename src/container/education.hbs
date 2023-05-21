@@ -1,0 +1,33 @@
+{{!-- 
+Це код container файлу для education сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/skills"
+--}}
+
+{{#with main}}
+    <main>
+        <section>
+            {{> title data=" My Education" big=true}}
+            <ul>
+                {{#each education}}
+                <li>
+                {{name}}
+                {{#if isEnd includeZero=true}} (закінчив) {{/if}}
+                {{#unless isEnd includeZero=true}} (ще в процесі ) {{/unless}}
+                </li>
+                {{/each}}
+            </ul>
+        </section>
+        <section>
+            {{> title data=" My Certificates" big=true}}
+            <ul>
+                {{#each certificates}}
+                <li>
+                    {{name}}
+
+                    {{#if id includeZero=true}} ({{id}}) {{/if}}
+                </li>
+                {{/each}}
+            </ul>
+        </section>
+    </main>
+{{/with}}
