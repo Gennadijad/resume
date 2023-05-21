@@ -240,6 +240,8 @@ router.get('/work', function (req, res) {
                   name: 'hihi awards',
                 },
               ],
+              stackAmount: 3,
+              awardsAmount: 2,
             },
           ],
         },
