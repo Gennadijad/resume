@@ -1,0 +1,61 @@
+{{!-- 
+Це код container файлу для js сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/js"
+--}}
+
+<div>
+    <h1>{{name}}</h1>
+</div>
+<div>
+    <h2>
+        <em>{{description}}</em>
+    </h2>
+</div>
+<div>
+    <h2>
+        {{#with history}}
+            <div>
+                <h5>year: {{year}}; </h5>
+                <h5>founder: {{founder}} </h5>
+            </div>
+        {{/with}}
+    </h2>
+</div>
+<hr>
+<div>
+    {{> title data="Types" big=true}}
+    <div>
+        <h4>{{types}} <span class="badge bg-secondary">New</span></h4>
+    </div>
+    {{> title data="Syntax" big=true}}
+    {{#with syntax}}
+        <div>
+            <h4>variables: {{variables}}; </h4>
+            <h4>functions: {{functions}};</h4>
+            <h4>conditionals: {{conditionals}};</h4>
+            <h4>loops: {{loops}};</h4>
+            <h4>classes: {{classes}};</h4>
+            <div>
+    {{/with}}
+    {{> title data="Features" big=true}}
+    <div>
+        <h4>{{features}}</h4>
+    </div>
+    {{> title data="Libraries" big=true}}
+    <div>
+        <h4>{{libraries}}</h4>
+    </div>
+    {{> title data="Tools" big=true}}
+    <div>
+        <h4>{{tools}}</h4>
+    </div>
+    <section>
+                {{> title data="Community" big=true}}
+                <ul>
+                    {{#each community}}
+                        <li><span class="badge text-bg-name">{{name}}</span></li>
+                        <li><span class="badge text-bg-type">{{type}}</span></li>   
+                        
+                    {{/each}}
+                </ul>
+            </section>
