@@ -1,0 +1,84 @@
+<div> 
+{{> title data="Web" big=true}} 
+    {{#with web}}
+    {{> title data="Languages"}} 
+        {{#each languages}}
+            <hr>
+            <ul>
+                <li> 
+                    <b>name: {{name}}</b>
+                </li>
+                <li>  
+                    <b>version: {{version}}</b> 
+                </li> 
+                <li>
+                    <b>description: {{description}}</b>
+                </li> 
+            <hr>
+            {{#each elements}}
+                <ul>
+                    <li>
+                        <b>name - {{name}}</b>
+                    </li> 
+                    <li>
+                        <b>description - {{description}}</b>
+                    </li>
+                </ul>  
+                {{#each attributes}}  
+                   <ul>  
+                        <li>  
+                            <b>name - {{name}}</b>
+                        </li> 
+                        <li>
+                            <b>description - {{description}}</b>  
+                        </li>  
+                    </ul>  
+                {{/each}}  
+            {{/each}}  
+            {{#each properties}}
+                <lu>
+                    <li> 
+                        <b>name - {{name}}</b>
+                    </li>
+                    <li>
+                        <b>description - {{description}}</b>
+                    </li>
+                </lu> 
+                {{#each values}}  
+                    <ul>  
+                        <li>  
+                            <b>value - {{value}}</b>
+                        </li>
+                        <li> 
+                            <b>description - {{description}}</b> 
+                        </li> 
+                    </ul>  
+                {{/each}}  
+           {{/each}}  
+           {{#each functions}}
+                <ul>
+                    <li> 
+                        <b>name - {{name}}</b>
+                    </li>
+                    <li> 
+                        <b>description - {{description}}</b>
+                    </li>     
+                </ul>
+                {{#each parameters}}  
+                    <ul>  
+                        <li>  
+                            <b>name - {{name}} </b>
+                        </li>
+                        <li>  
+                            <b>type - {{type}} </b>
+                        </li>
+                        <li>  
+                            <b>description - {{description}} </b>
+                        </li>  
+                    </ul>  
+                {{/each}} 
+                <hr> 
+            {{/each}}  
+        {{/each}}  
+    {{/with}} 
+</div> 
