@@ -1,0 +1,152 @@
+{{!-- 
+Це код container файлу для task21 сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/task21"
+--}}
+<main>
+    <div>
+        {{#with heading}}
+            {{#with main}}
+                <h1 class="text-center">{{title}}</h1>
+                <hr>
+                <h2>
+                    <em>{{text}}</em>
+                </h2>
+                <u>{{> title data=" Button_text"}}</u>
+               {{#with button_text}}
+                    <h4>
+                        <b>solid: {{solid}}</b>
+                    </h4>
+                    <h4>
+                        <b>outline: {{outline}}</b>
+                    </h4>
+                {{/with}}
+            {{/with}}
+            <br>
+            {{#with second}}
+            <h1 class="text-center">{{title}}</h1>
+                <hr>
+                <h2>
+                    <em>{{text}}</em>
+                </h2>
+                <u>{{> title data=" Button_text"}}</u>
+
+                {{#with button_text}}
+                    <h4>
+                        <b>solid: {{solid}}</b>
+                    </h4>
+                    <h4>
+                        <b>outline: {{outline}}</b>
+                    </h4>
+                {{/with}}
+            {{/with}}
+            <br>
+            {{#with subblock}}
+            <h1 class="text-center">{{title}}</h1>
+                <hr>
+                <h2>
+                    <em>{{text}}</em>
+                </h2>
+                <u>{{> title data=" Button_text"}}</u>
+                {{#with button_text}}
+                    <h4>
+                        <b>solid: {{solid}}</b>
+                    </h4>
+                    <h4>
+                        <b>outline: {{outline}}</b>
+                    </h4>
+                {{/with}}
+            {{/with}}
+        {{/with}}
+        <hr>
+        <br>
+        <div class="display-1"> Nested_display</div>
+           {{#with nested_display}}
+            <h3>
+                <b>title: {{title}}</b>
+            </h3>
+            <br>
+            <h3>
+                <div class="display-4"> children_display</div>
+            </h3>
+            {{#with children_display}}
+                <div>
+                    <button class="btn btn-outline-warning">Warning</button>
+                </div>
+                <h3>
+                    <b>title: {{title}}</b>
+                </h3>
+                <h3>
+                    <b>text: {{text}}</b>
+                </h3>
+                <u>{{> title data=" button"}}</u>
+                {{#with button}}
+                    <h4>
+                        <b>text: {{text}}</b>
+                    </h4>
+                {{/with}}
+            {{/with}}
+            <br>
+            <h3>
+                <em>{{> title data=" header_text"}}</em>
+            </h3>
+            <h3>
+                <b>header_text: {{header_text}}</b>
+            </h3>
+            <u>{{> title data=" button"}}</u>
+            {{#with button}}
+                <h4>
+                    <b>text: {{text}}</b>
+                </h4>
+            {{/with}}
+        {{/with}}
+        <br>
+        {{> title data=" Paragraph" big=true}}
+        <br>
+        <div>
+            <button class="btn btn-primary">Primary</button>
+        </div>
+        <br>
+        <div>
+            <button class="btn btn-outline-primary">Outline Primary</button>
+        </div>
+        <br>
+        <div>
+            <button class="btn btn-secondary">Secondary</button>
+            <button class="btn btn-outline-secondary">Secondary</button>
+        </div>
+        <br>
+        <div>
+            <button class="btn btn-dark">Dark</button>
+            <button class="btn btnoutline-dark">Dark</button>
+        </div>
+           {{#with paragraph}}
+            <h3>
+                <b>title: {{title}}</b>
+            </h3>
+            <h3>
+                <b>text: {{text}}</b>
+            </h3>
+            <u>{{> title data=" button"}}</u>
+            {{#with button}}
+                <h4>
+                    <b>text: {{text}}</b>
+                </h4>
+                <h4>
+                    <b>url: {{url}}</b>
+                </h4>
+            {{/with}}
+            <u>{{> title data=" list_name"}}</u>
+            {{#each list_name}}
+                <ul>
+                    <li>
+                        <b>text: {{text}}</b>
+                    </li>
+                   <li>
+                        <b>url: {{url}}</b>
+                        <button type="button" class="btn btn-link">Link</button>
+                    </li>
+                </ul>
+            {{/each}}
+        {{/with}}
+    </div>
+</main>
