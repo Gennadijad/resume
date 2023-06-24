@@ -1,0 +1,189 @@
+<main>
+    <div>
+        {{#with page_header}}
+            <h1 class="text-center">{{title}}</h1>
+                <hr>
+                <h2>
+                    <em>{{description}}</em>
+                </h2>
+        {{/with}}
+        <br>
+         <div class="display-6 text-end">
+            <b>Section</b>
+        </div>
+        {{#with section}}
+            {{#with about_us}}
+                {{#with title_list}}
+                    <h3>
+                        <em>
+                            <u>main:</u>
+                            {{main}}
+                        </em>
+                    </h3>
+                    <br>
+
+                    <h3>
+                        <em>
+                            <u>sub:</u>
+                            {{sub}}
+                        </em>
+                    </h3>
+                {{/with}}
+                <u>{{> title data=" Button"}}</u>
+                {{#with button}}
+                    <h4>
+                        <b>text: {{text}}</b>
+                    </h4>
+                {{/with}}
+                <button type="button" class="btn btn-outline-warning">Warning</button>
+            {{/with}} 
+            <br>
+            <div class="display-5 text-muted">
+                <b>Advantage</b>
+            </div>
+            {{#with advantage}}
+                <h3>
+                    <em>
+                        <u>title:</u>
+                        {{title}}
+                    </em>
+                </h3>
+                <br>
+                <div class="display-4 text-muted">
+                <b>Efficiency</b>
+            </div>
+                {{#with efficiency}}    
+                    <h3>
+                       <em>
+                            <u>title:</u>
+                            {{title}}
+                        </em>
+                    </h3>
+                    <h3>
+                        <em>
+                            <u>sub_title:</u>
+                            {{sub_title}}
+                        </em>
+                    </h3>
+                    <h3>
+                        <em>
+                            <u>description:</u>
+                            {{description}}
+                        </em>
+                    </h3>
+                    <h3>
+                        <em>
+                            <u>button:</u>
+                            {{button}}
+                        </em>
+                    </h3>
+                {{/with}}
+                <br>
+                <div class="display-4 text-muted text-center">
+                <b>Innovation</b>
+                </div>
+                <button type="button" class="btn btn-outline-warning">Warning</button>
+                {{#with innovation}}    
+                    <h3>
+                       <em>
+                            <u>title:</u>
+                            {{title}}
+                        </em>
+                    </h3>
+                    <h3>
+                        <em>
+                            <u>sub_title:</u>
+                            {{sub_title}}
+                        </em>
+                    </h3>
+                    <h3>
+                        <em>
+                            <u>description:</u>
+                            {{description}}
+                        </em>
+                    </h3>
+                    <h3>
+                        <em>
+                            <u>button:</u>
+                            {{button}}
+                        </em>
+                    </h3>
+                {{/with}}
+                 <br>
+                 <div class="display-4 text-muted text-end">
+                <b>Collaboration</b>
+                </div>
+                {{#with collaboration}}    
+                    <h3>
+                       <em>
+                            <u>title:</u>
+                            {{title}}
+                        </em>
+                    </h3>
+                    <h3>
+                        <em>
+                            <u>sub_title:</u>
+                            {{sub_title}}
+                        </em>
+                    </h3>
+                    <h3>
+                        <em>
+                            <u>description:</u>
+                            {{description}}
+                        </em>
+                    </h3>
+                    <h3>
+                        <em>
+                            <u>button:</u>
+                            {{button}}
+                        </em>
+                    </h3>
+                {{/with}}  
+            {{/with}} 
+            <br> 
+            <div class="card">
+                <div class="card-body">
+                    <div class="display-5">
+                        <b>Agreement</b>
+                        <br>
+                        <button type="button" class="btn btn-success">Success</button>
+                    </div>
+               </div>
+            </div>
+            {{#with agreement}}
+              <h3>
+                    <em>
+                        <u>title:</u>
+                        {{title}}
+                    </em>
+                </h3> 
+                <br>
+                {{> title data=" Info"}}
+                {{#with info}}    
+                    <h3>
+                       <em>
+                            <u>sub_title:</u>
+                            {{sub_title}}
+                        </em>
+                    </h3>
+                    <br>
+                    {{> title data=" Detail"}}
+                    {{#with detail}} 
+                        <h3>
+                           <em>
+                                <u>text:</u>
+                                {{text}}
+                            </em>
+                        </h3>
+                        <h3>
+                           <em>
+                                <u>button:</u>
+                                {{button}}
+                            </em>
+                        </h3>
+                    {{/with}}   
+                {{/with}}  
+            {{/with}}
+        {{/with}}
+    </div>
+</main>
