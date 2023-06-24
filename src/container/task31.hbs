@@ -1,0 +1,291 @@
+{{!-- 
+Це код container файлу для task31 сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/task31"
+--}}
+
+<main>
+    <div class="display-1 text-center ">Navigation</div>
+    <br>
+    <div class="card">
+        <img class="card-img-top" src="https://picsum.photos/400/200" alt="Product photo"
+    </div>
+    <div class="card body">
+
+    </div>
+    <br>
+    {{#with navigation}}
+        <div class="display-3 text-center ">Links</div>
+        {{#each links}}
+            <ul>
+                <li>text: {{text}}</li>
+                <li>href: {{href}}</li>
+            </ul>
+        {{/each}}
+        <br>
+        <div class="display-5 text-center ">Button</div>
+        {{#with button}}
+            <h6>text: {{text}}</h6>
+            <h6>href: {{href}}</h6>
+        {{/with}}
+        <a href="#" class="btn btn-primary"> Lets start</a>
+    {{/with}}
+    <hr>
+    <div class="display-1 text-center ">Header</div>
+    {{#with header}}
+        <h6><u>title:</u> {{title}}</h6>
+        <h6><u>description:</u> {{description}}</h6>
+        <br>
+        <div class="display-5 text-center ">Button</div>
+        {{#with button}}
+            <h6>text: {{text}}</h6>
+            <h6>link: {{link}}</h6>
+        {{/with}}
+        <a href="#" class="btn btn-primary"> Learn More</a>
+    {{/with}}
+    <hr>
+    <div class="display-1 text-center ">City</div>
+    {{#with city}}
+        <h4>title: {{title}}</h4>
+        <br>
+        <div class="display-4 text-center ">Cards</div>
+        {{#each cards}}
+        
+            <div class="display-6">
+                <em>Picture</em>
+            </div>
+            {{#with picture}}
+                <h6>src: {{src}}</h6>
+                <h6>alt: {{alt}}</h6>
+            {{/with}}
+            <br>
+            <h6><u>title:</u> {{title}}</h6>
+            <h6><u>description:</u> {{description}}</h6>
+            <br>
+            <div class="display-5 text-center ">Button</div>
+            {{#with button}}
+                <h6>text: {{text}}</h6>
+                <h6>href: {{href}}</h6>
+            {{/with}}
+        {{/each}}
+           <div class="card ">
+                <div class="card-header text-bg-secondary">
+                    <div class="display-1 text-center t">City</div>
+                </div>   
+                <br>
+                <ul class="list group">
+                    <li class="list-group-item">
+                        <a href="#" class="btn btn-primary">New York</a>
+                        <a href="https://picsum.photos/400/200" class="btn btn-link">New York</a>
+                    </li>
+                    <br>
+                    <li class="list-group-item">
+                        <a href="#" class="btn btn-primary">Paris</a>
+                        <a href="https://picsum.photos/400/200" class="btn btn-link">Paris</a>
+                    </li>
+                    <br>
+                    <li class="list-group-item">
+                        <a href="#" class="btn btn-primary">Tokyo</a>
+                        <a href="https://picsum.photos/400/200" class="btn btn-link">Tokyo</a>
+                    </li>
+                    <br>
+                    <li class="list-group-item">
+                        <a href="#" class="btn btn-primary">Sydney</a>
+                        <a href="https://picsum.photos/400/200" class="btn btn-link">Sydney</a>
+                    </li>
+                </ul>
+                <div class="card-footer text-bg-secondary">
+                    <button class="btn btn-dark btn-sm">Update list</button>
+                </div>
+            </div>
+
+    {{/with}}
+    </div>
+    <hr>
+    <div class="display-1 text-center ">Winner</div>
+    {{#with winner}}
+        <h4>title: {{title}}</h4>
+        <div class="display-6 text-center ">
+            <em>Table</em>
+        </div>
+        {{#with table}}
+            <h6>head: {{head}}</h6>
+            <br>
+            {{> title data="User"}}
+            {{#each user}}
+                <ul>
+                    <li>place: {{place}}</li>
+                    <li>name: {{name}}</li>
+                    <li>surname: {{surname}}</li>
+                    <li>nickname: {{nickname}}</li>
+                </ul>
+            {{/each}}
+        {{/with}}
+        <br>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                       # 
+                    </th>
+                    <th>
+                       name 
+                    </th>
+                    <th>
+                       surname 
+                    </th>
+                     <th>
+                       nickname 
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Ada</td>
+                    <td>Lovelace</td>
+                    <td>The Enchantress of Numbers</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Grace</td>
+                    <td>Hopper</td>
+                    <td>Amazing Grace</td>
+                </tr>
+                 <tr>
+                    <th>3</th>
+                    <td>Katherine</td>
+                    <td>Johnson</td>
+                    <td>The Human Computer</td>
+                </tr>
+            </tbody>
+        </table>
+    {{/with}}
+    <hr>
+     <div class="display-1 text-center ">Gallery</div>
+    {{#with gallery}}
+        <h4>title: {{title}}</h4>
+        <br>
+        <div class="display-4 text-center ">Cards</div>
+        {{#each cards}}
+            <ul>
+                <li><b>name:</b> {{name}}</li>
+                <li><b>items:</b> {{items}}</li>
+            </ul>
+        {{/each}}
+        <br>
+        <div class="row">
+            <div class="col-4">
+                <div class="card text-bg-warning">
+                    <div class="card-header text-center">The Mona Lisa</div>
+                    <div class="card-body"> Painting', 'Oil on poplar panel'</div>
+                    <div class="card-footer text-center">1503-1519</div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card text-bg-danger">
+                    <div class="card-header text-center">The Persistence of Memory</div>
+                    <div class="card-body"> Painting', 'Oil on canvas'</div>
+                    <div class="card-footer text-center">1931</div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card text-bg-success">
+                    <div class="card-header text-center">The Starry Night</div>
+                    <div class="card-body"> Painting', 'Oil on canvas</div>
+                    <div class="card-footer text-center">1889</div>
+                </div>
+            </div>
+        </div>
+    {{/with}}
+    <hr>
+     <div class="display-1 text-center ">Relaxion</div>
+    {{#with relaxion}}
+        <h4><u>title:</u> {{title}}</h4>
+        <br>
+        <div class="display-4 text-center ">Cards</div>
+        {{#each cards}}
+            <ul>
+                <li><b>header:</b> {{header}}</li>
+                <li><b>title:</b> {{title}}</li>
+                <li><b>description:</b> {{description}}</li>
+            </ul>
+        {{/each}}
+    {{/with}}
+    <hr>
+     <div class="display-1 text-center ">Rest</div>
+    {{#with rest}}
+        <br>
+        <div class="display-4 text-center ">Cards</div>
+        {{#each cards}}
+            <ul>
+                <li><b>header:</b> {{header}}</li>
+                <li><b>title:</b> {{title}}</li>
+                <li><b>description:</b> {{description}}</li>
+                <li><b>button:</b> {{button}}</li>
+                <li><b>footer:</b> {{footer}}</li>
+            </ul>
+        {{/each}}
+    {{/with}}
+    <br>
+        <div class="row g-4">
+            <div class="col-6">
+                <div class="card text-bg-warning">
+                    <div class="card-header text-center">Cooking</div>
+                    <div class="card-body text-center"> The Joy of Cooking <br>"Protecting your skin from the sun's harmful rays is crucial for reducing the risk of skin cancer and premature aging. Experts recommend using a broad-spectrum sunscreen with an SPF of at least 30 and reapplying every two hours."</div>
+                    <div class="card-footer text-center"></div>
+                    <button class="btn btn-primary">Learn More</button>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card text-bg-danger">
+                    <div class="card-header text-center">Travel</div>
+                    <div class="card-body text-center"> The Benefits of Traveling<br>'Traveling broadens your perspective, provides new experiences, and creates lasting memories.'</div>
+                    <div class="card-footer text-center">Photo by Sime Basioli on Unsplash</div>
+                     <button class="btn btn-primary">Explore</button>
+                </div>
+            </div>
+        </div>
+    <hr>
+     <div class="display-1 text-center ">Proposition</div>
+    {{#with proposition}}
+        <h4>title: {{title}}</h4>
+        <br>
+        <div class="display-4 text-center ">Card</div>
+        {{#each card}}
+            <ul>
+                <li><b>header:</b> {{header}}</li>
+                <li><b>title:</b> {{title}}</li>
+                <li><b>description:</b> {{description}}</li>
+            </ul>
+        {{/each}}
+    {{/with}}
+    <hr>
+     <div class="display-1 text-center ">Footer</div>
+    {{#with footer}}
+        <h4>title: {{title}}</h4>
+        <br>
+        <div class="display-4 text-center ">Navigation</div>
+        {{#each navigation}}
+            <ul>
+                <li><b>text:</b> {{text}}</li>
+                <li><b>href:</b> {{href}}</li>
+            </ul>
+        {{/each}}
+        <br>
+        <div class="display-4 text-center ">SocialMedia</div>
+        {{#each socialMedia}}
+            <ul>
+                <li><b>name:</b> {{name}}</li>
+                <li><b>link:</b> {{link}}</li>
+            </ul>
+        {{/each}}
+        <br>
+        <div class="display-4 text-center ">Partners</div>
+        {{#each partners}}
+            <ul>
+                <li><b>name:</b> {{name}}</li>
+                <li><b>link:</b> {{link}}</li>
+            </ul>
+        {{/each}}
+    {{/with}}
+</main>
