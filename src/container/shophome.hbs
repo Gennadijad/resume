@@ -1,0 +1,320 @@
+{{!-- 
+Це код shophome файлу для shophome сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/shophome"
+--}}
+
+<main>
+  <div class="display-1 text-center ">Navigation</div>
+  <br>
+  {{#with navigation}}
+    <div class="display-3 text-center ">Links</div>
+    {{#each links}}
+      <ul>
+        <li>text: {{text}}</li>
+        <li>href: {{href}}</li>
+      </ul>
+    {{/each}}
+  {{/with}}
+  <hr>
+  <div class="display-1 text-center ">NewsBlock</div>
+  <br>
+  {{#with newsBlock}}
+    <div class="display-4 text-center ">Cards</div>
+    {{#each cards}}
+      <ul>
+        <li><b>title:</b> {{title}}</li>
+        <li><b>description:</b> {{description}}</li>
+        <li><b>isTop:</b> {{isTop}}</li>
+        <li><b>isNew:</b> {{isNew}}</li>
+      </ul>
+    {{/each}}
+  {{/with}}
+  <div class="display-1 text-center ">GoodsBlock</div>
+  <br>
+  {{#with goodsBlock}}
+    <div class="display-3 text-center ">Tabs</div>
+    {{#each tabs}}
+      <ul>
+      <li><b>isActive:</b> {{isActive}}</li>
+      <li><b>isDisabled:</b> {{isDisabled}}</li>
+      <li><b>text:</b> {{text}}</li>
+      </ul>
+    {{/each}}
+    <div class="display-3 text-center ">Cards</div>
+     {{#each cards}}
+      <ul>
+      <li><b>image:</b> {{image}}</li>
+      <li><b>title:</b> {{title}}</li>
+      <li><b>description:</b> {{description}}</li>
+      <li><b>isHot:</b> {{isHot}}</li>
+      <li><b>isNew:</b> {{isNew}}</li>
+      </ul>
+    {{/each}}
+  {{/with}}
+   <div class="display-1 text-center ">Subscribe</div>
+   <br>
+  {{#with subscribe}}
+    <h6>header: {{header}}</h6>
+    <h6>description: {{description}}</h6>
+    <br>
+    <div class="display-5 text-center ">Buttons</div>
+    {{#each buttons}}
+      <ul>
+        <li><b>text:</b> {{text}}</li>
+        <li><b>link:</b> {{link}}</li>
+      </ul>
+    {{/each}}  
+  {{/with}}
+  <div class="display-1 text-center ">Service</div>
+   <br>
+  {{#with service}}
+    <h6>title: {{title}}</h6>
+    <h6>description: {{description}}</h6>
+    <br>
+    <div class="display-5 text-center ">Buttons</div>
+    {{#each buttons}}
+      <ul>
+        <li><b>text:</b> {{text}}</li>
+        <li><b>link:</b> {{link}}</li>
+      </ul>
+    {{/each}}  
+  {{/with}}
+  <br>
+  <div class="display-1 text-center ">Footer</div>
+  {{#each footer}}
+    {{#each this}} 
+      <ul>
+        <li><b>text:</b> {{text}}</li>
+        <li><b>link:</b> {{link}}</li>
+      </ul>
+    {{/each}}
+  {{/each}}
+  <div class="card">
+    <div class="nav">
+      <div class="nav-item">
+        <a href="#" class="nav-link">Home</a>
+      </div>
+      <div class="nav-item">
+        <a href="#" class="nav-link">Link</a>
+      </div>
+      <div class="nav-item">
+        <a href="#" class="nav-link">Link</a>
+      </div>
+      <div class="nav-item">
+        <a href="#" class="nav-link disabled">Disabled</a>
+      </div>
+    </div>
+    <br>
+  <div class="display-2 text-center ">Топ статті</div>
+  <br>
+  <div class="row g-1">
+    <div class="col-3">
+      <div class="card text-bg-dark">
+        <div class="card-header text-center">Ноут
+          <span class="badge text-bg-success rounded-pill">Нова</span>  
+          <span class="badge text-bg-danger rounded-pill">Топ</span>
+        </div>
+      <div class="card-body"> Потрібен новий ноутбук? Як же вибрати правильну модель?</div>
+       </div>
+    </div>
+     <div class="col-3">
+      <div class="card text-bg-dark">
+        <div class="card-header text-center">Принтер
+        <span class="badge text-bg-danger rounded-pill">Топ</span>
+        </div>
+      <div class="card-body"> Обираєте принтер? Ця стаття для тебе.....</div>
+       </div>
+    </div>
+    <div class="col-3">
+      <div class="card text-bg-dark">
+        <div class="card-header text-center">Ідеї подарунків</div>
+        <div class="card-body"> Так хочеться порадувати своїх рідних, близьких, друзів, чудовими подарунками.</div>
+        </div>
+    </div>
+    <div class="col-3">
+      <div class="card text-bg-dark">
+        <div class="card-header text-center">Ідеї подарунків</div>
+        <div class="card-body">Так хочеться порадувати своїх рідних, близьких,.....</div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card text-bg-dark">
+        <div class="card-header text-center">Ідеї подарунків</div>
+        <div class="card-body"> Так хочеться порадувати своїх рідних, близьких, друзів, чудовими подарунками.</div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card text-bg-dark">
+        <div class="card-header text-center">Захист для гаджету</div>
+        <div class="card-body"> Якщо декілька років тому вибір зупинявся на плівці та ... </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card text-bg-dark">
+        <div class="card-header text-center">Тепло в дім
+        <span class="badge text-bg-success rounded-pill">Нова</span> 
+      </div>
+       <div class="card-body"> Якщо зовсім недавно ми хотіли, щоб у нас вдома було прохолодно, то зараз ми мріємо про тепло.</div>
+      </div>
+    </div>
+  <div class="col-3">
+    <div class="card text-bg-dark">
+      <div class="card-header text-center">Тепло в дім
+      <span class="badge text-bg-success rounded-pill">Нова</span> 
+      </div>
+      <div class="card-body"> Якщо зовсім недавно ми хотіли, щоб у на...</div>
+    </div>
+  </div>
+  <hr>
+  <br>
+  <div class="row g-4">
+    <div class="col-12">
+      <div class="nav  nav-tabs">
+        <div class="nav-item">
+          <a href="#" class="nav-link active">Топ</a>
+        </div>
+        <div class="nav-item">
+          <a href="#" class="nav-link">Ноути</a>
+        </div>
+        <div class="nav-item">
+          <a href="#" class="nav-link">ПК</a>
+        </div>
+        <div class="nav-item">
+          <a href="#" class="nav-link disabled">Планшети</a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row g-2">
+      <div class="col-4">
+        <div class="card ">
+          <div class="card-header text-center text-bg-secondary">Image cap</div>
+          <div class="card-body text-grey"> Card Title
+            <span class="badge text-bg-warning rounded-pill">HOT!</span>
+            <span class="badge text-bg-primary rounded-pill">Нове</span> 
+          </div>
+          <b>Some quick example text to build on the card title and mak...</b>
+        </div>
+      </div>
+       <div class="col-4">  
+        <div class="card ">
+          <div class="card-header text-center text-bg-secondary">Image cap</div>
+          <div class="card-body text-grey"> Card Title
+        </div>
+          <b>Some quick example text to build on the card title and make
+              up the bulk of the card's content.</b>
+        </div>
+      </div>
+       <div class="col-4">
+        <div class="card ">
+          <div class="card-header text-center text-bg-secondary">Image cap</div>
+          <div class="card-body text-grey"> Card Title
+        </div>
+          <b>Some quick example text to build on the card title and make
+              up the bulk of the card's....</b>
+        </div>
+      </div>
+       <div class="col-4">
+        <div class="card ">
+          <div class="card-header text-center text-bg-secondary">Image cap</div>
+          <div class="card-body text-grey"> Card Title
+        </div>
+          <b>Some quick example text to...</b>
+        </div>
+      </div>
+       <div class="col-4">
+        <div class="card ">
+          <div class="card-header text-center text-bg-secondary">Image cap</div>
+          <div class="card-body text-grey"> Card Title
+            <span class="badge text-bg-primary rounded-pill">Нове</span> 
+          </div>
+          <b>Some quick example text to build on the card title and make
+              up the bulk of the card's...</b>
+        </div>
+      </div> <div class="col-4">
+        <div class="card ">
+          <div class="card-header text-center text-bg-secondary">Image cap</div>
+          <div class="card-body text-grey"> <b>Card Title</b>
+            <span class="badge text-bg-warning rounded-pill">HOT!</span>
+          </div>
+          <b>Some quick example text to build on the card title and make up the bulk of the card's content.</b>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <br>
+  <div class="row">
+    <div class="col-12">
+      <div class="card text-bg-dark">
+      <div class="card-body display-1">H2 Heading</div>
+      <div class="card-body display-5"> Paragraph</div>
+      <ul class="list group">
+        <li class="list-group-item">
+          <a href="#" class="btn btn-primary">Зареєструватись</a>
+        </li>
+        <br>
+        <li class="list-group-item">
+          <a href="#" class="btn btn-primary">Оформити підписку</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <br>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card text-bg-success">
+      <div class="card-body display-1 text-center">H2 Heading</div>
+      <div class="card-body display-5 text-center"> Paragraph</div>
+        <div class="card-body text-bg-success text-center">
+        <button class="btn btn-primary ">Детальніше</button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+          <div class="card-body">
+          <div class="nav flex-colum">
+            <div class="nav-item g-5">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Link</a>
+                <a href="#" class="nav-link">Link</a>
+                <a href="#" class="nav-link disabled">Disabled</a>
+              </div>
+              <div class="nav-item">
+               <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Link</a>
+                <a href="#" class="nav-link">Link</a>
+                <a href="#" class="nav-link disabled">Disabled</a>
+              </div>
+              <div class="nav-item">
+               <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Link</a>
+                <a href="#" class="nav-link">Link</a>
+                <a href="#" class="nav-link disabled">Disabled</a>
+              </div>
+              <div class="nav-item">
+               <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Link</a>
+                <a href="#" class="nav-link">Link</a>
+                <a href="#" class="nav-link disabled">Disabled</a>
+              </div>
+              <div class="nav-item">
+               <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Link</a>
+                <a href="#" class="nav-link">Link</a>
+                <a href="#" class="nav-link disabled">Disabled</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+</main>
